@@ -1,34 +1,25 @@
-dbyll
-=====
+# Minimal Mistakes
 
-Open source stylish, minimalistic theme for jekyll.  
-Demo: http://dbtek.github.io/dbyll/
+**[Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes)** is a two column responsive Jekyll theme perfect for powering your GitHub hosted blog.
 
-## New
-Dbyll for Ghost is now available. Get it [here](https://github.com/dbtek/dbyll-ghost) now.
+**Jekyll 3 Update:** A version of Minimal Mistakes compatible with Jekyll 3 can be found in the [`jekyll3` branch](https://github.com/mmistakes/minimal-mistakes/tree/jekyll3). GitHub Pages is [locked at version 2.4](https://pages.github.com/versions/) so some keep that in mind if you're trying to use 3.0 features that aren't supported there yet.
 
-### Features
-- Responsive layout.
-- Supports tags and categories.
-- Social profile and bio of author.
-- Bootstrap based.
-- Glyphicon and Font-Awesome Icons.
-- Pagination.
-- Syntax highlighting with pygments.
-- Disqus comments.
+## Minimal Mistakes is all about:
 
+* Responsive templates. Looking good on mobile, tablet, and desktop.
+* Gracefully degrading in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.
+* Minimal embellishments -- content first.
+* Optional large feature images for posts and pages.
+* Simple and clear permalink structure.
+* [Custom 404 page](http://mmistakes.github.io/minimal-mistakes/404.html) to get you started.
+* Support for Disqus Comments
 
-### Download
-* [Download dbyll](https://github.com/dbtek/dbyll/archive/master.zip)
+![screenshot of Minimal Mistakes theme](http://mmistakes.github.io/minimal-mistakes/images/mm-theme-post-600.jpg)
 
-### Screenshots
+See a [live version of Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes/) hosted on GitHub.
 
-![dbyll-screenshot](	assets/media/dbyll-ss.png)
+## Getting Started
 
-### License
-- [MIT](http://opensource.org/licenses/MIT)
+Minimal Mistakes takes advantage of Sass and data files to make customizing easier. These features require Jekyll 2.x and will not work with older versions of Jekyll.
 
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/dbtek/dbyll/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
+To learn how to install and use this theme check out the [Setup Guide](http://mmistakes.github.io/minimal-mistakes/theme-setup/) for more information.
