@@ -1,12 +1,12 @@
-title:            Blog Title
+title:            My Tech Blog
 description:      Describe your website here.
-disqus_shortname: neohpstrtheme
-reading_time:     true
+#disqus_shortname: neohpstrtheme
+reading_time:     false
 words_per_minute: 200
 logo:             images/logo.png
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-# url: http://aronbordin.com/neo-hpstr-jekyll-theme
+#url: http://elang2.github.io
 
 menu:
   - title: 'Home'
@@ -28,28 +28,28 @@ menu:
 
 # Owner/author information
 owner:
-  name:           Your name
-  site:           http://aronbordin.com
+  name:           Elankumaran Srinivasan
+  site:           http://elang2.github.io/
   avatar:         images/avatar.jpg
-  bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
-  email:          you@email.com
+  bio:            "I am a software engineer, Java and open source technonogy enthusiast."
+  email:          elang2@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter: aron_bordin
-  facebook:
-  github: aron-bordin
+  facebook: elang.kumaran.7
+  github: elang2
   stackexchange:
-  linkedin:
+  linkedin: elankumaran-srinivasan-290851a4
   instagram:
   flickr:
   tumblr:
   # google plus id, include the '+', eg +AronBordin
-  google_plus:    +yourid
+  google_plus:    +elang2
 
 social:
   - title: "github"
-    url: "https://github.com/aron-bordin"
+    url: "https://github.com/elang2"
   - title: "linkedin"
-    url: "https://br.linkedin.com/in/aronbordin"
+    url: "https://www.linkedin.com/in/elankumaran-srinivasan-290851a4"
   - title: "youtube"
     url: "https://www.youtube.com/channel/UCfnSek-9HPWOx5e2pH7VFgg"
 # Background image to be tiled on all pages
