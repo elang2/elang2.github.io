@@ -462,7 +462,7 @@ ul.social-buttons li a:active {
 	height: 100%;
 	min-height: 300px;
 	overflow: hidden;
-	background-color: $header-color;
+	background: linear-gradient(to left, #525252 , #3d72b4);
 }
 .header-toggle{
 	display: block;
