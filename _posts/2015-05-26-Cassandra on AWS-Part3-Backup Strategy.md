@@ -1,6 +1,6 @@
 This third part will focus on the databack up stragey for Cassandra on AWS.
 
-#Cassandra Data Backup Strategy
+##Cassandra Data Backup Strategy
 
 In case of a node failure in a cluster, Cassandra can automatically repair and get the node up to speed on the data using the replicated
 data that is present on the other nodes.
@@ -9,9 +9,9 @@ It is advised to enabled incremental backup and then collect snapshots at a regu
 
 The snapshot backups and incremental backups can be collected from the nodes and then pushed into S3 for use during restore.
 
--Snapshot backup should be taken on a daily basis at 12:00 A.M midnight.
--Snapshots & incremental backup files older than 7 days can be deleted from S3.
--S3 backup location should be named and organized based on Cluster and node names. In case of AWS these will be Region and AZs.
+- Snapshot backup should be taken on a daily basis at 12:00 A.M midnight.
+- Snapshots & incremental backup files older than 7 days can be deleted from S3.
+- S3 backup location should be named and organized based on Cluster and node names. In case of AWS these will be Region and AZs.
 
 
 ##Cassandra Node Failure Recovery Strategy
