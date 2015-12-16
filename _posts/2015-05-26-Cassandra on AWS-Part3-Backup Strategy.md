@@ -2,8 +2,8 @@
 layout: post
 title: Cassandra On AWS - Part 3 - Backup Strategy
 description: ""
-tags: [sample post]
-categories: [image]
+tags: [Cassandra, AWS]
+categories: [Cassandra, AWS]
 image:
   background: triangular.png
 ---
@@ -33,10 +33,10 @@ repair tool on the node.
 Execute the following command on the failed node soon after startup:
 
 {% highlight yaml%}
-"nodetool repair -dc < datacenter or AZ name> -h localhost
+nodetool repair -dc <datacenter or AZ name> -h localhost
 
 Example:
-"nodetool repair -dc us-west-2 -h localhost
+nodetool repair -dc us-west-2 -h localhost
 
 {% endhighlight %}
 
@@ -44,8 +44,8 @@ Node repair makes sure that that old delete data(Tombstoned) does not resurrect 
 
 ##Reference
 
-[Incremental Backup]
+<a href="https://docs.datastax.com/en/cassandra/2.0/cassandra/operations/ops_backup_takes_snapshot_t.html">[Taking a Snapshot]</a>
 
-[Taking a Snapshot]
+<a href="https://docs.datastax.com/en/cassandra/2.0/cassandra/operations/ops_backup_incremental_t.html">[Incremental Backup]</a>
 
-[Restoring from a snapshot]
+<a href="https://docs.datastax.com/en/cassandra/2.0/cassandra/operations/ops_backup_snapshot_restore_t.html">[Restoring from a snapshot]</a>

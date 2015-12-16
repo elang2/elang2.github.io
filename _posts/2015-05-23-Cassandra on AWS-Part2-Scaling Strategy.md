@@ -2,8 +2,8 @@
 layout: post
 title: Cassandra On AWS - Part 2 - Scaling
 description: ""
-tags: [sample post]
-categories: [image]
+tags: [Cassandra, AWS]
+categories: [Cassandra, AWS]
 image:
   background: triangular.png
 ---
