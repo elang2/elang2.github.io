@@ -1,3 +1,13 @@
+---
+layout: post
+title: Cassandra On AWS - Part 2 - Scaling
+description: ""
+tags: [sample post]
+categories: [image]
+image:
+  background: triangular.png
+---
+
 This is the second part of the Cassandra series and I will try to talk about Scaling Strategy.
 
 #Cassandra Scaling Strategy

@@ -1,3 +1,13 @@
+---
+layout: post
+title: Cassandra On AWS - Part 1 - Setup
+description: ""
+tags: [sample post]
+categories: [image]
+image:
+  background: triangular.png
+---
+
 This is the first of the multi part series on Cassandra. In each part I will cover one aspect amount setting up, managing and monitoring Cassandra on 
 Amazon Web Services.
 

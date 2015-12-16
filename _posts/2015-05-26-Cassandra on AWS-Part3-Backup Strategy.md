@@ -1,3 +1,13 @@
+---
+layout: post
+title: Cassandra On AWS - Part 3 - Backup Strategy
+description: ""
+tags: [sample post]
+categories: [image]
+image:
+  background: triangular.png
+---
+
 This third part will focus on the databack up stragey for Cassandra on AWS.
 
 ##Cassandra Data Backup Strategy
