@@ -8,6 +8,12 @@ image:
   background: triangular.png
 ---
 
+
+<figure class="half center">
+<img src="/images/jvm/visual-vm.png" height="400px"></img>
+</figure>
+
+
 When it comes to application development, its always better to be a pessimist rather than an optimist. Irrespective of how good a developer you are are, the application will surely run into some unforeseen issues once its running in production environment.
 
 Out of memory exceptions every now and then which requires Tomcat to be restarted or a case of degrading application performance which disappears after server restart but reappears after the application has been running for some time.

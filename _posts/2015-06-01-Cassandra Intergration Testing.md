@@ -1,12 +1,19 @@
 ---
 layout: post
-title: Cassandra Intergration Testing
+title: Cassandra Integration Testing
 description: ""
 tags: [Cassandra, Unit Testing]
 categories: [Cassandra]
 image:
   background: triangular.png
 ---
+
+<figure class="half center">
+
+<img src="/images/cassandra-aws/cassandra_logo.png" height="400px"></img>
+
+</figure>
+
 
 Cassandra Unit is a library which can intergrate with your Java code and help dynamically spin up an embedded Cassandra instances when needed.
 Once you are done using this instance, you can just termiated it and the library will take care of cleaning up after it.
@@ -22,7 +29,7 @@ What purpose does this library serve ?
 
 {% highlight yaml %}
 
-<!--Cassandra Unit Intergration With Spring -->
+<!--Cassandra Unit Integration With Spring -->
 <dependency>
      <groupId>org.cassandraunit</groupId>
      <artifactId>cassandra-unit-spring</artifactId>
