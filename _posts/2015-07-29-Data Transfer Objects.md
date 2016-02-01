@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Google Protobufs for data transfer objects
+title: Data Transfer Objects
 description: ""
-tags: [Java, Microservices]
+tags: [Java]
 categories: [Java]
 image:
   background: triangular.png
