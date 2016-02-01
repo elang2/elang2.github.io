@@ -8,10 +8,6 @@ image:
   background: triangular.png
 ---
 
-<figure class="half center">
-<img src="/images/proto/google-protocol-buffers.jpg" height="400px"></img>
-</figure>
-
 #Data Transfer Objects
 
 These are objects which are used to hold and transmit information between different processes. The processes could be different services within the same application or could be spread across multiple application in a distributed system. The application may be communicating with each other using Remote calls like RMI or web services (SOAP or REST).
