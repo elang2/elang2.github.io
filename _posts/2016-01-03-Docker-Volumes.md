@@ -32,6 +32,34 @@ $docker-machine ip default
 {% endhighlight %}
 
 
+#Overview of Volumes in OSX
+
+
+1. Virtual Box APP is installed on OSX.
+2. Boot2Docker is launched in a virtual machine named 'default' on VirtualBox.
+3. "docker run" command run the docker image in a container on the "default" VM.
+
+Volume Mounting :
+
+A directory present on the OSX (host machine) is first mounted to a directory of the same name(need not be of the same name) on the VM.
+This ensures access of the host(OSX) directory contents to the guest OS (boot2docker 'default' VM). 
+Now when the "docker run" command is executed with the volume parameters, it is the "directory" on the guest OS (boot2docker 'default' VM ) which gets mounted onto the container.  
+   
+
+<figure class="center">
+<img src="/images/docker/docker-shared.png" height="400px"></img>
+</figure>
+
+
+Example with different directory names:
+
+
+
+<figure class="center">
+<img src="/images/docker/docker-shared-2.png" height="400px"></img>
+</figure>
+
+
 
 #Volumes in OSX
 
@@ -60,14 +88,32 @@ This would be a straightforward task in Linux installations but in OSX, since Do
 
 2 . Click on 'Shared folders'.
 
-3 . Add a new shared folder. Choose directory on OSX that you would like to use as Volume.
+3 . Add a new shared folder. Set "Folder Path" to a directory on OSX that you would like to use as Volume. Provide a name for the folder.
+    In this example, I have provided "docker-shared" as the name for the folder.
 
 4 . Enable 'Auto Mount' and 'Make Permanent'.
+
+<figure class="center">
+<img src="/images/docker/vbox-shared.png" height="400px"></img>
+</figure>
+
 
 5 . Log into the running 'default' machine using the following command. This should log you into the 'default' Linux VM's shell.
 
 {% highlight yaml %}
 $docker-machine ssh default
+
+Note: Make sure that the boot2docker[default virtual machine (vm)] is already running.
+
+Use the following command or start the "default" VM via the VirtualBox application.
+
+$ VBoxManage start default
+
+Ensure the terminal connects to the docker boot2dock virtual machine
+
+$ eval "$(docker-machine env default)"
+
+
 {% endhighlight %}
 
 6 . Execute the following command and note down the GID and UID values.
@@ -77,19 +123,21 @@ docker@default:~$ id
 uid=1000(docker) gid=50(staff) groups=50(staff),100(docker)
 {% endhighlight %}
 
-7 . Create a directory named 'docker-volume' on the Linux VM
+7 . Create a directory named 'docker-shared' on the Linux VM
 
 {% highlight yaml %}
-docker@default:~$ mkdir docker-volume
+docker@default:~$ mkdir docker-shared
 {% endhighlight %}
 
 8 . Execute the following command to mount the host directory previously shared to the VM
 
 Syntax : sudo mount -t vboxsf -o defaults,uid=<uid>,gid=<gid> <mount_name> <local_dir>
  
+<local_dir> Is the name of the directory created on the "default" VM.
+<mount_name> Is the folder name provided in the shared folder settings of the VM.
  
 {% highlight yaml %}
-docker@default:~$ sudo mount -t vboxsf -o defaults,uid=1000,gid=50 docker-shared docker-volume
+docker@default:~$ sudo mount -t vboxsf -o defaults,uid=1000,gid=50 docker-shared docker-shared
 {% endhighlight %}
 
 9 . Exit out of the Linux VM default machine.
@@ -102,7 +150,7 @@ docker@default:~$ exit
 
 {% highlight yaml %}
 
-$docker run -v ./docker-volume:/mounted-volume --name=docker-volume-demo my-image
+$docker run -v ./docker-shared:/docker-shared --name=docker-volume-demo my-image
 
 {% endhighlight %}
 
@@ -113,10 +161,10 @@ $docker run -v ./docker-volume:/mounted-volume --name=docker-volume-demo my-imag
 {% highlight yaml %}
 root@3af1249144e1:/# ls
 bin  boot  dev  etc  home  lib  lib64  media  mnt  mounted-volume  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-root@3af1249144e1:/# cd mounted-volume/
-root@3af1249144e1:/mounted-volume# ls
-root@3af1249144e1:/mounted-volume# mkdir testdir
-root@3af1249144e1:/mounted-volume# ls
+root@3af1249144e1:/# cd docke-shared
+root@3af1249144e1:/docker-shared# ls
+root@3af1249144e1:/docker-shared# mkdir testdir
+root@3af1249144e1:/docker-shared# ls
 testdir
 {% endhighlight %}
 
