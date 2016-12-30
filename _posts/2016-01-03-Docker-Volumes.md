@@ -32,6 +32,34 @@ $docker-machine ip default
 {% endhighlight %}
 
 
+#Overview of Volumes in OSX
+
+
+1. Virtual Box APP is installed on OSX.
+2. Boot2Docker is launched in a virtual machine named 'default' on VirtualBox.
+3. "docker run" command run the docker image in a container on the "default" VM.
+
+Volume Mounting :
+
+A directory present on the OSX (host machine) is first mounted to a directory of the same name(need not be of the same name) on the VM.
+This ensures access of the host(OSX) directory contents to the guest OS (boot2docker 'default' VM). 
+Now when the "docker run" command is executed with the volume parameters, it is the "directory" on the guest OS (boot2docker 'default' VM ) which gets mounted onto the container.  
+   
+
+<figure class="center">
+<img src="/images/docker/docker-shared.png" height="400px"></img>
+</figure>
+
+
+Example with different directory names:
+
+
+
+<figure class="center">
+<img src="/images/docker/docker-shared-2.png" height="400px"></img>
+</figure>
+
+
 
 #Volumes in OSX
 
