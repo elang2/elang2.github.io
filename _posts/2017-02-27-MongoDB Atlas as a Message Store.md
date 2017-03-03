@@ -1,19 +1,15 @@
 ---
 layout: post
-title: Using MongoDB As A Message Store For Communication Module
+title: Implementing CHAT system with MongoDB Atlas
 tags: [MongoDB]
-categories: [Monitoring]
+categories: [MongoDB]
 image:
   background: triangular.png
 ---
 
-Being an organization whose bread and butter is to help people meet their love of their life, its essential that we keep the users happy and engaged.
+A CHAT system essentially lets one user send messages to and receive messages from other users. The messages are usually text based but the chat system should be able to support different media types like Videos, Audio, images etc.
 
-Communication is an important aspect of relationship. It's the only way two people can understand about each other and decide if they are compatible with each other.
-
-The current features in the application for user to user communication are nice but a new age calls for a new approach. This year, one of the goals was to revamp the communication module to be more real time and CHAT like.
-I will explain the architecture of the new communication system in a separate post. In this blog, I will focus on the storage aspect of the system.
-
+In the following article I will concentrate on data storage aspect of the CHAT system. I will explain the various considerations behind choosing the current date store.  
 
 ## Choosing A Data Store
 This is what we wanted from the storage aspects of the system :
