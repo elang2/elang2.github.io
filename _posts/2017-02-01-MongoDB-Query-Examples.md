@@ -62,7 +62,7 @@ Below is a sample documents that are stored in the collection:
 
 
 <hr>
-###Query #1 - Create document (User sends a message to another)
+### Query #1 - Create document (User sends a message to another)
 
 
 {% highlight css %}
@@ -77,7 +77,7 @@ db.getCollection('messages').insertOne({
 {% endhighlight %}
 
 <hr>
-###Query #2 - Message history between two users with the most recent message at the bottom 
+### Query #2 - Message history between two users with the most recent message at the bottom 
 
 {% highlight css %}
 db.getCollection('messages').find({
@@ -95,7 +95,7 @@ db.getCollection('messages').find({
 
 
 <hr>
-###Query #3 - Retrieve all messages received by an user from other users and which are still unread by the receiving user
+### Query #3 - Retrieve all messages received by an user from other users and which are still unread by the receiving user
 
 
 {% highlight css %}
@@ -111,7 +111,7 @@ db.getCollection('messages').find({
 
 
  
-###Query #4 - Retrieve all messages sent by an user to other users
+### Query #4 - Retrieve all messages sent by an user to other users
 
  
 {% highlight css %}
@@ -126,7 +126,7 @@ db.getCollection('messages').find({
 
 <hr/>
 
-###Query #5 - Retrieve count of all messages sent by the user till date
+### Query #5 - Retrieve count of all messages sent by the user till date
 
  
 {% highlight css %}
@@ -139,7 +139,7 @@ db.getCollection('messages').find({
 
 <hr/>
 
-###Query #6 - Retrieve grouped count of unread messages per contact
+### Query #6 - Retrieve grouped count of unread messages per contact
 
 
  <figure class="half center">
@@ -214,7 +214,7 @@ db.getCollection('messages').aggregate([{
 
 <hr/>
 
-###Query #7: Get a unique list of Ids of all people that the user sent messages to 
+### Query #7: Get a unique list of Ids of all people that the user sent messages to 
 
 
 {% highlight yaml %}
@@ -241,7 +241,7 @@ db.getCollection('messages').aggregate([{
 
 <hr/>
 
-###Query #7: Count of messages sent by the user to each of the contacts 
+### Query #7: Count of messages sent by the user to each of the contacts 
 
 
 {% highlight yaml %}
@@ -272,7 +272,7 @@ db.getCollection('messages').aggregate([{
 
 <hr/>
 
-###Query #8: Get paginated list of messages sent between an user and another user [ Pagination Approach #1 : Using pageSize and pageNum ]
+### Query #8: Get paginated list of messages sent between an user and another user [ Pagination Approach #1 : Using pageSize and pageNum ]
 
 
 {% highlight yaml %} 
@@ -307,7 +307,7 @@ db.getCollection('messages').find({
 
 <hr/>
 
-###Query #9: Get list of messages sent between an user and another match  [Pagination Approach #2 : Range based pagination]
+### Query #9: Get list of messages sent between an user and another match  [Pagination Approach #2 : Range based pagination]
 
 {% highlight yaml %} 
 
@@ -344,7 +344,7 @@ db.getCollection('messages').find({
 
 
 
-###Query #10: Update messages received by an an user from another user as read.
+### Query #10: Update messages received by an an user from another user as read.
 
 {% highlight yaml %} 
 db.getCollection('messages').update({

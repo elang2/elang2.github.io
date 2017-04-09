@@ -12,7 +12,7 @@ image:
 <img src="/images/proto/google-protocol-buffers.jpg" height="400px"></img>
 </figure>
 
-#Why use Protos ?
+# Why use Protos ?
 
 1. Enforces a contract between sender and receiver services by using its own schema specification language. The PROTOC (Proto compiler) can translate the schema into language specific objects for use in your application.
 
@@ -25,14 +25,14 @@ image:
 5. Language interoperability. Since the payload is bytes, the sender and receiver sharing the schema can be implemented in any language. You can have a Java Webservice talk to a different server written in C++.
 
 
-#When to use Protos 
+# When to use Protos 
 
 1. Protos makes sense for back-end system to system services where there is no need to have visibility of the payload being transmitted.
 
 2. Ideal for microservices architecture where each service is deployed independent of each other. The backward compatability of the schemas ensures that different service can work well while still using different versions of the library.
 
 
-#Protos are not ideal for
+# Protos are not ideal for
 
 1. Front end to backend communication. The payload in case of protos is byte data. It's easier for the front-end to receive a JSON or XML directly than encoded bytes.
 
