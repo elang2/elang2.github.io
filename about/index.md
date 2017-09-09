@@ -15,7 +15,7 @@ modified: 2015-12-12
 </figure>
 
 
-###I am a software engineer working for a leading I.T firm and specialize in developing distributed web applications using Java and other Open Source technologies.
+### Expert at building highly scalable, low latency, distributed applications based on microservices architecture.
 
 <div align="center">
 <table>
